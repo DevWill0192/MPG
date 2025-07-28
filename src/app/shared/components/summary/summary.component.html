@@ -1,0 +1,41 @@
+<h3 class="title_summary">Metas por volumen</h3>
+<p class="subtitle_summary">Estas son las principales metas por volumen que debes cumplir al mes.</p>
+<p class="info_summary">A medida que avanzas en cada una, vas sumando al porcentaje
+  de cumplimiento total para obtener tu bonificación.</p>
+
+<div class="progress-bar">
+  <div class="progress__thumb"
+       [style.width.%]="porcentajeAvance() > 100 ? 100 : porcentajeAvance()">
+
+   @if (porcentajeAvance() < 100) {
+     <span class="progress__thumb-text">{{porcentajeAvance()}}%</span>
+   } @else {
+     <span class="progress__thumb-text">100%</span>
+    }
+  </div>
+  <div class="progress">100%</div>
+</div>
+
+<div class="filter-section">
+  <h3 class="filter-title">Filtrar por:</h3>
+  <div class="filter-option_selected" (click)="toggleVisibility()" (keydown.enter)="toggleVisibility()" (keydown.space)="toggleVisibility()" tabindex="0" role="button">{{ filtroSeleccionado() }}</div>
+  @if (isVisible()) {
+  <ul class="filter_list">
+      <li class="filter_item"><button (click)="setFiltro('Cartones')" (keydown.enter)="setFiltro('Cartones')" (keydown.space)="setFiltro('Cartones')" tabindex="0">Cartones</button></li>
+      <li class="filter_item"><button (click)="setFiltro('Hectolitros')" (keydown.enter)="setFiltro('Hectolitros')" (keydown.space)="setFiltro('Hectolitros')" tabindex="0">Hectolitros</button></li>
+    </ul>
+  }
+</div>
+
+<div class="circle-progress-container">
+  <app-circle-progress
+    *ngFor="let kpi of filteredKpis(); trackBy: trackByKpi"
+    [progress]="kpi.porcentaje"
+    [size]="44"
+    [progressColor]="kpi.color"
+    [textSize]="12"
+    customClass="circle-item"
+    [title]="kpi.nombre">
+  </app-circle-progress>
+</div>
+

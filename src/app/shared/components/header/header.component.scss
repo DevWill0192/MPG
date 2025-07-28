@@ -1,0 +1,94 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+// =============================================================================
+// HEADER COMPONENT STYLES
+// =============================================================================
+
+.header {
+  background-color: $primary-blue;
+  text-align: center;
+  height: 70px;
+  border-radius: 0 0 20px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 999
+}
+.user-location{
+  width: fit-content;
+}
+
+// =============================================================================
+// USER CARD STYLES
+// =============================================================================
+
+.user-card {
+
+  @include flex-between;
+  height: 100%;
+  color: $white;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  padding: 0 $spacing-md;
+  cursor: pointer;
+
+  &__menu {
+    @include flex-center;
+    margin-right: $spacing-lg;
+    width: 40px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__logo {
+    @include flex-center;
+    margin-left: $spacing-lg;
+
+    img {
+      width: 90px;
+    }
+  }
+
+  &__info {
+    font-size: $font-size-base;
+    width: calc(100% - 80px);
+    text-align: left;
+    padding-left: $spacing-md;
+  }
+}
+
+// =============================================================================
+// USER INFORMATION STYLES
+// =============================================================================
+
+.user {
+  &-name {
+    @include text-style($font-size-base, $font-weight-bold, $white);
+    margin: 0;
+  }
+
+  &-code,
+  &-location {
+    @include text-style($font-size-sm, $font-weight-light, $white);
+    margin: 0;
+  }
+
+  &-location {
+    background: $bg-secondary;
+    border-radius: $border-radius-full;
+    padding: 0 $spacing-sm;
+    margin-top: $spacing-xs;
+  }
+
+  &-code strong,
+  &-location strong {
+    font-weight: $font-weight-bold;
+  }
+}

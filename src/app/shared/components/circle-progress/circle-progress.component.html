@@ -1,0 +1,24 @@
+ <div class="circle-progress-container" [style.width.px]="size" [style.height.px]="size" [ngClass]="customClass">
+      <svg class="circle-progress-svg" viewBox="0 0 36 36">
+        <path
+          class="circle-progress-bg"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+          [style.stroke]="backgroundColor"
+        />
+        <path
+          class="circle-progress-fill"
+          [style.stroke]="progressColor"
+          [style.stroke-dasharray]="circumference"
+          [style.stroke-dashoffset]="dashOffset"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+      </svg>
+      <div class="circle-progress-text" [style.fontSize.px]="textSize">
+        {{ progress }}%
+      </div>
+    </div>
+    <p class="title_circle">{{ title }}</p>

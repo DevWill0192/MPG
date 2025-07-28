@@ -1,0 +1,120 @@
+/* =============================================================================
+   GLOBAL STYLES - Estilos globales de la aplicación
+   ============================================================================= */
+
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+/* =============================================================================
+   RESET & BASE STYLES
+   ============================================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+   background: linear-gradient(
+      #0a2440 0%,
+      #122d68 66.61%,
+      #0a2440 100%);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+  background: $bg-primary;
+  font-family: $font-family-primary;
+  box-sizing: border-box;
+  color: $text-primary;
+  line-height: $line-height-normal;
+}
+
+/* =============================================================================
+   TYPOGRAPHY
+   ============================================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading-style;
+  margin: 0;
+}
+
+p {
+  @include body-text;
+  margin: 0 0 $spacing-md 0;
+}
+
+/* =============================================================================
+   FORM ELEMENTS
+   ============================================================================= */
+
+input {
+  @include input-base;
+  font-family: $font-family-secondary;
+  font-size: $font-size-base;
+  color: $gray-700;
+}
+
+button {
+  @include button-base;
+}
+
+/* =============================================================================
+   LAYOUT UTILITIES
+   ============================================================================= */
+
+.main {
+  margin: 0;
+  height: 100vh;
+  font-family: $font-family-primary;
+}
+
+/* =============================================================================
+   ACCESSIBILITY
+   ============================================================================= */
+
+.sr-only {
+  @include visually-hidden;
+}
+
+/* =============================================================================
+   UTILITY CLASSES
+   ============================================================================= */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: $spacing-xs; }
+.mb-2 { margin-bottom: $spacing-sm; }
+.mb-3 { margin-bottom: $spacing-md; }
+.mb-4 { margin-bottom: $spacing-base; }
+.mb-5 { margin-bottom: $spacing-lg; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: $spacing-xs; }
+.mt-2 { margin-top: $spacing-sm; }
+.mt-3 { margin-top: $spacing-md; }
+.mt-4 { margin-top: $spacing-base; }
+.mt-5 { margin-top: $spacing-lg; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: $spacing-xs; }
+.p-2 { padding: $spacing-sm; }
+.p-3 { padding: $spacing-md; }
+.p-4 { padding: $spacing-base; }
+.p-5 { padding: $spacing-lg; }

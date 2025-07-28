@@ -1,0 +1,17 @@
+<div class="input-wrapper">
+  <input
+    class="input-field"
+    [type]="type"
+    [id]="id"
+    [name]="name"
+    [(ngModel)]="value"
+    [checked]="checked"
+    [placeholder]="placeholder"
+     (change)="onCheckboxChange($event)">
+  <label
+    class="input-label"
+    [for]="id"
+  >
+    {{ label }}
+  </label>
+</div>

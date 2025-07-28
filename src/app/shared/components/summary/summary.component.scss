@@ -1,0 +1,145 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.title_summary {
+  @include heading-style($font-size-base, $font-weight-bold);
+  color: $text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.subtitle_summary {
+  @include text-style($font-size-base, $font-weight-bold, $text-primary);
+  margin-bottom: $spacing-base;
+  line-height: $line-height-normal;
+}
+
+.info_summary {
+  @include body-text($font-size-base);
+  margin-bottom: $spacing-lg;
+}
+
+.user-data,
+.history-list {
+  @include card-base;
+}
+
+.user-data p,
+.history-list p {
+  margin: $spacing-sm 0;
+  color: $gray-700;
+}
+
+// Progress bar component
+.progress-bar {
+
+  @include progress-bar-base(30px, $bg-secondary);
+  margin-top: $spacing-md;
+
+  @include flex-center;
+  .progress {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    background: $secondary-green;
+    border-radius: $border-radius-full;
+    transition: width $transition-normal;
+    font-size: $font-size-xs;
+    color: $white;
+
+    @include flex-center;
+  }
+
+  .progress__thumb {
+    height: 15px;
+    background: $secondary-green;
+    border-radius: 50px;
+    color: $white;
+    @include flex-center;
+    justify-content: flex-end;
+    transition: width $transition-normal;
+    position: relative;
+    font-size: $font-size-sm;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      margin-right: $spacing-sm;
+      width: 30px;
+      height: 30px;
+      background: $secondary-green;
+      border-radius: 50%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      right: -2px;
+      @include flex-center;
+      z-index: -1;
+      font-size: $font-size-xs;
+    }
+  }
+    justify-content: flex-start;
+    height: 15px;
+    box-shadow: 0px 3px 5px #303030;
+}
+
+.circle-progress-container {
+ display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  margin-top: $spacing-lg;
+  gap: 5px;
+  background: $bg-secondary;
+  border-radius: $border-radius-lg;
+  padding: $spacing-md;
+
+}
+
+.filter-section {
+  @include flex-between;
+  margin: $spacing-lg 0;
+  position: relative;
+}
+
+.filter-title {
+  @include text-style($font-size-base, $font-weight-light, $text-primary);
+  margin-right: $spacing-md;
+}
+
+.filter-option_selected {
+  @include button-secondary($white, $text-dark);
+  width: 150px;
+  height: 30px;
+  border-radius: $border-radius-xl;
+  @include flex-between;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  padding: 0 $spacing-md;
+}
+
+.filter_list {
+  position: absolute;
+  background-color: $white;
+  bottom: -78px;
+  width: 151px;
+  list-style: none;
+  padding: $spacing-md;
+  margin: 0;
+  right: 0;
+  @include flex-column;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-md;
+  gap: $spacing-sm;
+  z-index: $z-index-dropdown;
+}
+
+.filter_item button {
+  @include button-secondary(transparent, $text-dark);
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+}

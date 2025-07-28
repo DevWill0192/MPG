@@ -1,0 +1,19 @@
+<div class="tabs-container">
+  <ul class="tabs-header">
+   <li
+  *ngFor="let tab of tabs; let i = index"
+  (click)="setActiveTab(i)"
+  (keydown.enter)="setActiveTab(i)"
+  (keydown.space)="setActiveTab(i)"
+  [class.active]="i === activeTab"
+  tabindex="0"
+  role="button"
+>
+  {{ tab }}
+</li>
+  </ul>
+
+  <div class="tab-content-area">
+<ng-container *ngTemplateOutlet="tabContentTpl; context: { $implicit: activeTab, index: activeTab, setActiveTab: setActiveTab, tabs: tabs }"></ng-container>
+  </div>
+</div>

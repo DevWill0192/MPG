@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="user-card">
+    <div class="user-card__menu">
+      <app-menu></app-menu>
+    </div>
+
+    <div class="user-card__info">
+      @if (currentUser()) {
+        <p class="user-name"><strong>{{ currentUser()?.name || 'Usuario' }}</strong></p>
+        <p class="user-code"> <strong>Cad Modelo:</strong> {{ currentUser()?.id }}</p>
+        <p class="user-location">Modeloroma <strong> Nuevo León</strong></p>
+      }
+    </div>
+    <div class="user-card__logo">
+      <img src="https://superlikers-themes.s3.amazonaws.com/modelo_para_ganar/v4/logo-primario.png" alt="Logo" class="logo">
+    </div>
+  </div>
+</header>
+@if (showNotificatios()) {
+  <app-toash></app-toash>
+}
+

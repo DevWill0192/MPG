@@ -1,0 +1,24 @@
+<div class="home-container">
+  <div class="home__banner">
+    <img src="https://res.cloudinary.com/dnvy6oyza/image/upload/v1753578158/Multiple_Layers_3_fzftho.png" alt="">
+  </div>
+  <!-- en otro componente -->
+
+  <app-tabs [tabs]="['Resumen', 'Autoejecución', 'Radiografía']">
+    <ng-template #tabContent let-activeTab let-index="index" let-setActiveTab="setActiveTab" let-tabs="tabs">
+      <div style="padding: 20px 0;">
+        <ng-container [ngSwitch]="activeTab">
+          <div *ngSwitchCase="0" class="tab-content">
+              <app-summary></app-summary>
+          </div>
+          <div *ngSwitchCase="1" class="tab-content">
+              <app-summary></app-summary>
+          </div>
+          <div *ngSwitchCase="2" class="tab-content">
+              <app-summary></app-summary>
+          </div>
+        </ng-container>
+      </div>
+    </ng-template>
+  </app-tabs>
+</div>

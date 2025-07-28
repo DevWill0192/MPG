@@ -1,0 +1,128 @@
+// =============================================================================
+// VARIABLES SCSS - Sistema de diseño centralizado
+// =============================================================================
+
+// =============================================================================
+// COLORS
+// =============================================================================
+
+// Primary Colors
+$primary-blue: #385CAD;
+$primary-dark-blue: #0a2440;
+$primary-light-blue: #122d68;
+
+// Secondary Colors
+$secondary-green: #71ba1c;
+$secondary-orange: #f19613;
+$secondary-red: #ef5e5e;
+$secondary-teal: #65baaf;
+
+// Neutral Colors
+$white: #ffffff;
+$black: #000000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Text Colors
+$text-primary: $white;
+$text-secondary: #b3b3b3;
+$text-dark: #234386;
+$text-muted: $gray-600;
+
+// Background Colors
+$bg-primary: linear-gradient($primary-dark-blue 0%, $primary-light-blue 66.61%, $primary-dark-blue 100%);
+$bg-secondary: #0d2441;
+$bg-card: $white;
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+// Font Families
+$font-family-primary: "Exo", sans-serif;
+$font-family-secondary: 'Arial', sans-serif;
+
+// Font Sizes
+$font-size-xs: 9px;
+$font-size-sm: 12px;
+$font-size-base: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-tight: 1;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// =============================================================================
+// SPACING
+// =============================================================================
+
+// Spacing Scale
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 10px;
+$spacing-base: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 30px;
+$spacing-2xl: 40px;
+$spacing-3xl: 60px;
+
+// =============================================================================
+// BORDER RADIUS
+// =============================================================================
+
+$border-radius-sm: 5px;
+$border-radius-md: 6px;
+$border-radius-lg: 10px;
+$border-radius-xl: 20px;
+$border-radius-full: 50px;
+
+// =============================================================================
+// SHADOWS
+// =============================================================================
+
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+// =============================================================================
+// TRANSITIONS
+// =============================================================================
+
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// =============================================================================
+// Z-INDEX
+// =============================================================================
+
+$z-index-dropdown: 10;
+$z-index-modal: 1000;
+$z-index-tooltip: 1100;

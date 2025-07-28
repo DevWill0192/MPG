@@ -1,0 +1,48 @@
+.notification-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+    align-items: normal;
+    padding: 20px;
+    z-index: 99999;
+}
+.notification-modal{
+      padding: 20px;
+    background: #234386;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.notification-text {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.notification-modal__buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.notification-modal__buttons .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+}
+.notification-modal__buttons .btn--primary {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+.notification-modal__buttons .btn--secondary {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}

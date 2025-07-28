@@ -1,0 +1,63 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.tabs-header {
+  display: flex;
+  list-style: none;
+  padding: 0 5px;
+  margin: 0;
+  height: 33px;
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 21px;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.9);
+  background: #0a2440;
+}
+
+.tabs-header li {
+  padding: 0px 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Exo";
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+  color: #7894d2;
+}
+
+.tabs-header li.active {
+  font-weight: bold;
+  color: #0a2440;
+  border-radius: 50px;
+  height: 86%;
+  filter: drop-shadow(1px 8px 2px rgba(0, 0, 0, 0.4));
+  background: #ffc600;
+  background: linear-gradient(180deg,
+      #ffc600 0.00%,
+      #ff9015 100.00%);
+}
+
+.tabs-header li:hover {
+  font-weight: bold;
+  color: #0a2440;
+  border-radius: 50px;
+  height: 86%;
+  filter: drop-shadow(1px 8px 2px rgba(0, 0, 0, 0.4));
+  background: #ffc600;
+  background: linear-gradient(180deg,
+      #ffc600 0.00%,
+      #ff9015 100.00%);
+}
+
+.tabs-container {
+  padding: 1rem 0;
+}
+
+.tab-content-area {}
